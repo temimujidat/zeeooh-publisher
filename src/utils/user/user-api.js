@@ -4,8 +4,8 @@ let loginRoute = 'http://localhost:5000/publisher/login';
 let registerRoute = 'http://localhost:5000/publisher/create';
 
 if (process.env.NODE_ENV === 'production') {
-  loginRoute = 'https://zeeooh-backend.herokuapp.com/login';
-  registerRoute = 'https://zeeooh-backend.herokuapp.com/create';
+  loginRoute = 'https://zeeooh-backend.herokuapp.com/publisher/login';
+  registerRoute = 'https://zeeooh-backend.herokuapp.com/publisher/create';
 }
 
 const databaseRoute = {
