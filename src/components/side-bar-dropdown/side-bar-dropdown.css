@@ -1,0 +1,45 @@
+.side-bar-dropdown {
+  color: white;
+  margin-bottom: 1rem;
+}
+/* .side-bar-dropdown P, .side-bar-dropdown span {
+    margin: 0;
+} */
+
+.sidebar-dropdown-toggle {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0.49rem 0.15rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.sidebar-dropdown-active {
+  background-color: #f5148e;
+  color: white;
+}
+.sidebar-dropdown-toggle > * {
+  /* display: inline-block; */
+  padding-right: 0.39rem;
+  /* align-self: flex-start; */
+}
+
+.sidebar-dropdown-toggle > span:first-child {
+  padding-right: 0.42rem;
+  font-size: 1.2rem;
+}
+.sidebar-dropdown-toggle > span:last-child,
+.sidebar-dropdown-toggle > span:first-child {
+  line-height: 1.58rem;
+  font-size: 16px;
+}
+
+.sidebar-dropdown-content {
+  padding-left: 3rem;
+}
+
+.sidebar-dropdown-content > * {
+  margin: 0.7rem 0;
+  font-weight: lighter;
+  cursor: pointer;
+  font-size: 14px;
+}

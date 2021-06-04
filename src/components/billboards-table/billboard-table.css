@@ -1,0 +1,192 @@
+table tbody {
+  background-color: white;
+}
+.table {
+  margin-bottom: 0.5rem;
+}
+.billboard-table {
+  /* overflow: scroll; */
+  width: 100%;
+}
+table tbody tr:hover {
+  background: #ffffff;
+  box-shadow: 0px 5px 5px 2px rgba(0, 86, 179, 0.15);
+  cursor: pointer;
+}
+.lightert {
+  font-weight: bold;
+  font-size: 11px;
+  /* white-space: nowrap; */
+  line-height: 12px;
+  text-transform: uppercase;
+  /* background-color: #0056B3; */
+  color: #ffffff;
+}
+table th:first-child {
+  border-radius: 9px 0 0 0px;
+}
+table th:last-child {
+  border-radius: 0 9px 0px 0;
+}
+.table thead th {
+  vertical-align: middle;
+  background: #0056b3;
+  text-align: center;
+  /* border-radius: 6px 6px 0px 0px; */
+}
+.table td,
+.table th {
+  padding: 0.75rem 0.37rem;
+  /* vertical-align: middle; */
+  /* border-top: 1px solid #dee2e6; */
+}
+.fonter,
+.active,
+.inactive,
+.vacant {
+  text-align: center;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+}
+.fonter {
+  color: #6e6b7b;
+}
+.create-billboard-btn {
+  /* border: 1px solid red; */
+  margin: 0;
+  /* padding: 1 .48rem; */
+  /* text-transform: uppercase; */
+  background-color: #f5148e;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  border: 0;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+.create-billboard-btn:hover,
+.create-billboard-btn:not(:disabled):not(.disabled):active,
+.create-billboard-btn:focus {
+  background-color: #f5148e;
+}
+
+.edit-delete-container {
+  display: flex;
+  /* justify-content: space-around; */
+  flex-flow: row nowrap;
+  justify-content: center;
+  /* border: 1px solid yellow; */
+}
+
+.edit-delete-container > div {
+  padding-right: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  cursor: pointer;
+}
+.edit-delete-container > div:last-child {
+  padding: 0;
+}
+
+.billboard-amount {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
+}
+.edit-icon,
+.delete-icon {
+  font-size: 1rem;
+  align-self: center;
+  height: 16.5px;
+  width: 15px;
+}
+.delete-icon {
+  color: #b50841;
+  /* opacity: 0.7; */
+}
+.edit-icon {
+  color: #6e6b7b;
+  opacity: 0.7;
+}
+.billboard-amount > span:last-child,
+.edit-icon-text,
+.delete-icon-text {
+  font-size: 9px;
+  white-space: nowrap;
+}
+.more-icon {
+  font-size: 2rem;
+  height: 16.5px;
+  width: 15px;
+  cursor: pointer;
+  padding-left: 0;
+  margin-left: 0;
+}
+.locate {
+  font-size: 12px;
+  color: #6e6b7b;
+  text-align: center;
+}
+.active {
+  color: #f5148e;
+}
+.inactive {
+  color: #0056b3;
+}
+.vacant {
+  color: #24f25e;
+}
+
+.table-loading {
+  /* border: 1px solid green; */
+  height: 70vh;
+}
+.table-loading > td {
+  /* border: 1px solid yellow; */
+  text-align: center;
+}
+
+.table-loading > td > div {
+  /* border: 1px solid green; */
+  margin-top: 25%;
+}
+.evenad {
+  border: 0.3px solid rgba(0, 123, 255, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 123, 255, 0.1);
+  border-radius: 6px;
+}
+
+.show-cursor {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.sort-btn-up,
+.sort-btn-down {
+  /* border: 1px solid #f5148e; */
+  font-size: 0.78rem;
+  /* line-height: 0.45rem; */
+  /* display: inline-block; */
+  margin-left: 0.2rem;
+}
+.sort-btn-up {
+  /* margin-top: 0.5rem; */
+  justify-self: center;
+}
+.sort-btn-down {
+  margin-bottom: 0.5rem;
+  justify-self: center;
+}
+
+/* .sort-btn-down > :last-child, */
+.sort-btn-up > :last-child {
+  margin-top: 0.25rem;
+}
+.sort-btn-down > :last-child {
+  margin-bottom: 0.5rem;
+}

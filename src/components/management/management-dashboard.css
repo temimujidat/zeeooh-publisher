@@ -1,0 +1,38 @@
+.hermis {
+  /* max-width: 300px; */
+  overflow-x: scroll;
+}
+/****************************** scroll bar edit **********************/
+/* width */
+.hermis::-webkit-scrollbar {
+  width: 10px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+/* Track */
+.hermis::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+.hermis::-webkit-scrollbar-thumb {
+  background: #0056b3;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.hermis::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+  border-radius: 10px;
+} /****************************** end of scroll bar edit **********************/
+
+/* Loader area */
+.loading-container {
+  /* border: 1px solid pink; */
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
