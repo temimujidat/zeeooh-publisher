@@ -1,3 +1,3 @@
-1. hash password
-2. enforcing all models that require a mongoose objectId
-3. prevent duplicate company registration
+1. enforcing all models that require a mongoose objectId
+2. prevent duplicate company registration
+3. mongoose transaction

@@ -10,11 +10,13 @@ import {
 } from '../../redux/vertical-modal/verticalModalReducer';
 import { fetchUserOnRegister } from '../../redux/user/userReducer';
 import { unwrapResult } from '@reduxjs/toolkit';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
+import { setAlertContent } from '../../redux/alert/alertPopupReducer';
+import { overheadModalContainer } from '../../redux/overhead-modal/overheadModalReducer';
 
 const SignupForm = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
   return (
     <Formik
       validationSchema={registerScehma}
@@ -26,14 +28,13 @@ const SignupForm = () => {
         password: '',
       }}
       onSubmit={(values, { setSubmitting, setFieldError }) => {
-        // console.log(values)
         setSubmitting(true);
-        // console.log({ values, actions });
         dispatch(fetchUserOnRegister(values))
           .then(unwrapResult)
           .then((data) => {
             dispatch(closeVerticalModalDisplay());
-            history.push('/management');
+            dispatch(setAlertContent('alert-success-verify-email'));
+            dispatch(overheadModalContainer('alert'));
           })
           .catch((error) => {
             setSubmitting(false);

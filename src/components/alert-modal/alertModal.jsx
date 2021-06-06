@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { Modal } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { closeOverheadModalDisplay } from "../../redux/overhead-modal/overheadModalReducer";
-import "./alertModal.css";
+import { useEffect } from 'react';
+import { Modal } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeOverheadModalDisplay } from '../../redux/overhead-modal/overheadModalReducer';
+import './alertModal.css';
 
 const AlertModal = () => {
   const dispatch = useDispatch();
@@ -20,12 +20,16 @@ const AlertModal = () => {
         alt=""
       />
       <Modal.Body className="alerter">
-        Input successfully{" "}
-        {alertState === "alert-success-delete-billboard"
-          ? "deleted"
-          : alertState === "alert-success-edit-billboard"
-          ? "updated"
-          : "created"}
+        {alertState === 'alert-success-verify-email'
+          ? 'Check your mail for a verification link'
+          : `Input successfully
+          ${
+            alertState === 'alert-success-delete-billboard'
+              ? 'deleted'
+              : alertState === 'alert-success-edit-billboard'
+              ? 'updated'
+              : 'created'
+          }`}
       </Modal.Body>
     </center>
   );

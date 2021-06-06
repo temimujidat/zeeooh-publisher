@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 let loginRoute = 'http://localhost:5000/publisher/login';
-let registerRoute = 'http://localhost:5000/publisher/create';
+let registerRoute = 'http://localhost:5000/publisher/verify/email';
 
 if (process.env.NODE_ENV === 'production') {
   loginRoute = 'https://zeeooh-backend.herokuapp.com/publisher/login';
-  registerRoute = 'https://zeeooh-backend.herokuapp.com/publisher/create';
+  registerRoute = 'https://zeeooh-backend.herokuapp.com/publisher/verify/email';
 }
 
 const databaseRoute = {
@@ -20,7 +20,7 @@ const userApi = {
     });
     // console.log('login', response.data);
     if (response.data.message) {
-      throw new Error('Wrong email or password');
+      throw new Error(response.data.message);
     }
     console.log('login', response.data);
     return response.data;
@@ -31,7 +31,7 @@ const userApi = {
     });
     console.log('register', response.data);
     if (response.data.message) {
-      throw new Error('Email is already taken');
+      throw new Error(response.data.message);
     }
     return response.data;
   },
