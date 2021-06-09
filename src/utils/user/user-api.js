@@ -3,10 +3,10 @@ import axios from 'axios';
 let loginRoute = 'http://localhost:5000/publisher/login';
 let registerRoute = 'http://localhost:5000/publisher/verify/email';
 
-if (process.env.NODE_ENV === 'production') {
-  loginRoute = 'https://zeeooh-backend.herokuapp.com/publisher/login';
-  registerRoute = 'https://zeeooh-backend.herokuapp.com/publisher/verify/email';
-}
+// if (process.env.NODE_ENV === 'production') {
+//   loginRoute = 'https://zeeooh-backend.herokuapp.com/publisher/login';
+//   registerRoute = 'https://zeeooh-backend.herokuapp.com/publisher/verify/email';
+// }
 
 const databaseRoute = {
   login: loginRoute,
