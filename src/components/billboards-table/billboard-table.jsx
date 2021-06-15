@@ -98,7 +98,7 @@ const BillboardsTable = ({
           {isLoadingData ? (
             <tr className="table-loading">
               <td colSpan={100}>
-                <RingLoader borderColor="#0056b3" />
+                <RingLoader borderColor="#1A0E60" />
               </td>
             </tr>
           ) : (

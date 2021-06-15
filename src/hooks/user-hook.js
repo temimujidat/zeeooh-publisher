@@ -7,7 +7,9 @@ const useUserData = () => {
     getUser: () => {
       let userInfo =
         JSON.parse(window.sessionStorage.getItem('zabuni_user')) || null;
-      dispatch(setUserData(userInfo));
+      if (userInfo) {
+        dispatch(setUserData(userInfo));
+      }
       return userInfo;
     },
     setUser: (userData) => {

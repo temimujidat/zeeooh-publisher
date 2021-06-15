@@ -1,7 +1,7 @@
 .dashboard {
   display: flex;
   justify-content: space-between;
-  margin-top: 4.56rem;
+  margin-top: 4.2rem;
 }
 .dashboard-content {
   background-color: #e5e5e5;
@@ -21,7 +21,7 @@
   border: 1px solid goldenrod;
 } */
 .refresh-billboard-visuals {
-  background-color: #0056b3;
+  background-color: #1a0e60;
   width: fit-content;
   color: #fff;
   font-size: 0.76rem;

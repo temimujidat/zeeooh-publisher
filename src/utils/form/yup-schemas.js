@@ -101,6 +101,12 @@ export const registerScehma = Yup.object().shape({
       'Company name must contain only alphabets or numbers and must be longer than 5 characters'
     )
     .required('Company name is a required field'),
+  company_phone: Yup.string()
+    .matches(
+      /^[0-9]{11}$/,
+      'Comapany number can only contain numbers and must have 11 digits'
+    )
+    .required('Company phone number is a required field'),
   email: Yup.string()
     .email('Invalid email address')
     .trim()
@@ -114,13 +120,13 @@ export const registerScehma = Yup.object().shape({
 });
 
 export const editProfileSchema = Yup.object().shape({
-  firstName: Yup.string()
+  first_name: Yup.string()
     .matches(
       /^[a-zA-Z]{3,30}$/,
       'Firstname must contain only alphabets and must be more than 3 characters'
     )
     .required('First name is a required field'),
-  lastName: Yup.string()
+  last_name: Yup.string()
     .matches(
       /^[a-zA-Z]{3,30}$/,
       'Lastname must contain only alphabets and must be more than 3 characters'

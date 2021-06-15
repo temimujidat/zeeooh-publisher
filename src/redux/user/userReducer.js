@@ -15,6 +15,13 @@ export const fetchUserOnRegister = createAsyncThunk(
     return response;
   }
 );
+export const editPublisherProfile = createAsyncThunk(
+  'userState/editPublisherProfileStatus',
+  async ({ publisherId, ...others }) => {
+    const response = await userApi.editPublisherProfile(publisherId, others);
+    return response;
+  }
+);
 
 const userReducer = createSlice({
   name: 'userState',
@@ -37,14 +44,17 @@ const userReducer = createSlice({
       state = null;
     });
     builder.addCase(fetchUserOnRegister.fulfilled, (state, { payload }) => {
-      window.sessionStorage.setItem(
-        'zabuni_user',
-        JSON.stringify(payload.publisher)
-      );
-      return payload.publisher;
+      state = null;
     });
     builder.addCase(fetchUserOnRegister.rejected, (state, action) => {
       state = null;
+    });
+    builder.addCase(editPublisherProfile.fulfilled, (state, { payload }) => {
+      window.sessionStorage.setItem(
+        'zabuni_user',
+        JSON.stringify({ ...state, ...payload })
+      );
+      return { ...state, ...payload };
     });
   },
 });

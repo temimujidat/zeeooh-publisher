@@ -6,10 +6,11 @@ const Homepage = () => {
     <>
       <div className="taking">
         <div className="row">
-          <div className="col-md-6 col-12-sm-12">
+          <div className="col-md-6 ">
             <h1 className="grow">
-              Get analysis of all OOH <br />
-              in Nigeria on ZABUNI
+              Zeeooh has major OOH
+              <br />
+              publishers for your service
             </h1>
             <p className="texti">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam,
@@ -24,19 +25,36 @@ const Homepage = () => {
             </div>
           </div>
           <div className="col-md-6">
-            <center>
-              <img
-                src="https://res.cloudinary.com/adesanza/image/upload/v1616403586/zabuni/Group_1935_lvlpjg.svg"
-                alt=""
-              />
-            </center>
+            {/* <img
+              src="https://res.cloudinary.com/adesanza/image/upload/v1616403586/zabuni/Group_1935_lvlpjg.svg"
+              alt=""
+              width="100%"
+            /> */}
+            {/* <iframe
+              src="https://www.youtube.com/embed/9knXaWFC-FQ"
+              title="Zeeooh Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              className="iframe-test"
+            ></iframe> */}
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/9knXaWFC-FQ?controls=0"
+              title="Zeeooh Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="iframe-test"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
       <div>
-        <div className="starting">
+        <div className="">
           <h3 id="feature" className="differ">
-            Start your Campaign
+            Clientele
           </h3>
           <div className="row">
             <div className="col-md-4">
@@ -85,22 +103,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="later">
-        <center>
-          <div>
-            <h3 className="loader">Download ZABUNI web app</h3>
-            <p className="accurate">
-              Get accurate daily analysis of OOH on ZABUNI
-            </p>
-          </div>
-          <div>
-            <img
-              src="https://res.cloudinary.com/adesanza/image/upload/v1615209035/zabuni/Group_1528_acbfe5.png"
-              alt=""
-            />
-          </div>
-        </center>
-      </div>
       <footer className="row taking1">
         <div className="col-md-2">
           <ul>
@@ -141,3 +143,20 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+// {/* <div className="later">
+//         <center>
+//           <div>
+//             <h3 className="loader">Download ZABUNI web app</h3>
+//             <p className="accurate">
+//               Get accurate daily analysis of OOH on ZABUNI
+//             </p>
+//           </div>
+//           <div>
+//             <img
+//               src="https://res.cloudinary.com/adesanza/image/upload/v1615209035/zabuni/Group_1528_acbfe5.png"
+//               alt=""
+//             />
+//           </div>
+//         </center>
+//       </div> */}

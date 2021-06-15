@@ -23,7 +23,8 @@ const SignupForm = () => {
       initialValues={{
         first_name: '',
         last_name: '',
-        company: '',
+        company_name: '',
+        company_phone: '',
         email: '',
         password: '',
       }}
@@ -98,6 +99,22 @@ const SignupForm = () => {
               <Form.Text className="text-danger">
                 {touched.company_name && errors.company_name
                   ? errors.company_name
+                  : null}
+              </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="formBasicPhone">
+              <Form.Control
+                type="text"
+                placeholder="08123456789"
+                name="company_phone"
+                value={values.company_phone}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className="email-login-input"
+              />
+              <Form.Text className="text-danger">
+                {touched.company_phone && errors.company_phone
+                  ? errors.company_phone
                   : null}
               </Form.Text>
             </Form.Group>

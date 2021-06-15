@@ -107,8 +107,8 @@ const BillboardDataVisuals = ({
       result.datasets[2].data.push(value.vacant || 0);
       result.datasets[0].backgroundColor.push('#f5148e');
       result.datasets[0].borderColor.push('#f5148e');
-      result.datasets[1].backgroundColor.push('#0056b3');
-      result.datasets[1].borderColor.push('#0056b3');
+      result.datasets[1].backgroundColor.push('#1A0E60');
+      result.datasets[1].borderColor.push('#1A0E60');
       result.datasets[2].backgroundColor.push('#24f25e');
       result.datasets[2].borderColor.push('#24f25e');
       return result;

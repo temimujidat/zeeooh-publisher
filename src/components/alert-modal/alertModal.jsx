@@ -22,6 +22,8 @@ const AlertModal = () => {
       <Modal.Body className="alerter">
         {alertState === 'alert-success-verify-email'
           ? 'Check your mail for a verification link'
+          : alertState === 'alert-success-edit-profile'
+          ? 'Profile successfully updated'
           : `Input successfully
           ${
             alertState === 'alert-success-delete-billboard'

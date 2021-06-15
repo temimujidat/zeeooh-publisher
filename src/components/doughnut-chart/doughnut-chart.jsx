@@ -15,7 +15,7 @@ const DoughnutChart = ({ totalValue, value, classState }) => {
             fontWeight: '700',
             pathColor:
               classState === 'active'
-                ? '#0056b3'
+                ? '#1A0E60'
                 : classState === 'inactive'
                 ? '#f5148e'
                 : '#24f25e',

@@ -1,4 +1,4 @@
-import { Pie } from "react-chartjs-2";
+import { Pie } from 'react-chartjs-2';
 
 // function handleHover(evt, item, legend) {
 //     legend.chart.data.datasets[0].backgroundColor.forEach((color, index, colors) => {
@@ -14,37 +14,38 @@ import { Pie } from "react-chartjs-2";
 //   }
 
 const PieChart = ({ pieLabels, pieData }) => {
-    
-    return (
-        <Pie data={{
-            labels: [...pieLabels],
-            datasets: [{
-              label: 'Pie Dataset',
-              data: [...pieData],
-              backgroundColor: [
-                '#342929',
-                '#F5148E',
-                '#FFB800',
-                '#24F25E',
-                '#fff',
-                '#97B9DF'
-              ],
-              hoverOffset: 4
-            }]
-          }}
-          options={{
-                legend: {
-                    labels: {
-                        fontSize: 13,
-                        fontColor: '#fff',
-                        usePointStyle: true,
-                    },
-                    position: 'left'
-                }
-          }}
-          />
-    )
-    
-}
+  return (
+    <Pie
+      data={{
+        labels: [...pieLabels],
+        datasets: [
+          {
+            label: 'Pie Dataset',
+            data: [...pieData],
+            backgroundColor: [
+              '#342929',
+              '#f5148e',
+              '#FFB800',
+              '#24F25E',
+              '#fff',
+              '#97B9DF',
+            ],
+            hoverOffset: 4,
+          },
+        ],
+      }}
+      options={{
+        legend: {
+          labels: {
+            fontSize: 13,
+            fontColor: '#fff',
+            usePointStyle: true,
+          },
+          position: 'left',
+        },
+      }}
+    />
+  );
+};
 
 export default PieChart;
