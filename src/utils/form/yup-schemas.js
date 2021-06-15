@@ -41,8 +41,8 @@ export const createBillboardSchema = Yup.object().shape({
       'Invalid type'
     )
     .required('Must select an option'),
-  height_m: Yup.number().min(3).max(300).required('Height (m) is required'),
-  width_m: Yup.number().min(3).max(300).required('Width (m) is required'),
+  height_m: Yup.number().min(1).max(400).required('Height (m) is required'),
+  width_m: Yup.number().min(1).max(400).required('Width (m) is required'),
   height_px: Yup.number().min(0).max(4000).required('Height (px) is required'),
   width_px: Yup.number().min(0).max(4000).required('Width (px) is required'),
   status: Yup.string()
