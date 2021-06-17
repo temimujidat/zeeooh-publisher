@@ -26,16 +26,6 @@
 .olab {
   padding-top: 30px;
 }
-
-.later {
-  background-image: url(https://res.cloudinary.com/adesanza/image/upload/v1615208022/zabuni/Vector_38_lcgpqa.svg);
-  background-color: #e5e5e5;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  padding: 0 0 350px 0;
-}
 .loader {
   margin-top: 2rem;
   padding: 2rem 0 0 0;
@@ -88,7 +78,7 @@ a:hover {
 .taking {
   width: 100%;
   padding: 160px 0 50px 60px;
-  background-color: #e5e5e5;
+  background-image: url('https://res.cloudinary.com/adesanza/image/upload/v1623767456/zabuni/Group_2021_m9it9l.png');
   margin-left: 0;
 }
 .taking1 {
@@ -107,11 +97,14 @@ a:hover {
   border-radius: 40px;
 }
 .grow {
-  font-size: 45px;
   font-style: normal;
+  font-weight: normal;
+  font-size: 49px;
+  color: #fff;
+}
+.grow > span {
+  font-size: 50px;
   font-weight: 800;
-  color: #342929;
-  line-height: 70px;
 }
 #feature {
   color: #1a0e60;

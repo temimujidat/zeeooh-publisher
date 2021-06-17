@@ -49,3 +49,7 @@
 .modal-backdrop {
   background-color: rgba(0, 87, 179, 0.405);
 }
+.ds {
+  margin: auto;
+  text-align: center;
+}

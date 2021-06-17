@@ -21,7 +21,7 @@ const Header = () => {
             src={
               userState.company_logo
                 ? userState.company_logo
-                : 'https://res.cloudinary.com/adesanza/image/upload/v1623756805/zabuni/Zeeooh_logo_fay0re.svg'
+                : 'https://res.cloudinary.com/adesanza/image/upload/v1623766783/zabuni/Zeeooh_logo_1_wwzhne.svg'
             }
             alt="OE"
           />
@@ -96,7 +96,7 @@ const Header = () => {
       <nav className="navbar fixed-top navbar-expand-sm navbar-light header-nav1">
         <Link className="navbar-brand" to="/">
           <img
-            src="https://res.cloudinary.com/adesanza/image/upload/v1623756805/zabuni/Zeeooh_logo_fay0re.svg"
+            src="https://res.cloudinary.com/adesanza/image/upload/v1623766783/zabuni/Zeeooh_logo_1_wwzhne.svg"
             alt="ZEEOOH"
           />
         </Link>

@@ -6,11 +6,11 @@ const Homepage = () => {
     <>
       <div className="taking">
         <div className="row">
-          <div className="col-md-6 ">
+          <div className="col-md-7 ">
             <h1 className="grow">
-              Zeeooh has major OOH
+              Zeeooh has a major OOH
               <br />
-              publishers for your service
+              <span>publishers for your service</span>
             </h1>
             <p className="texti">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam,
@@ -24,25 +24,15 @@ const Homepage = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-5">
             {/* <img
               src="https://res.cloudinary.com/adesanza/image/upload/v1616403586/zabuni/Group_1935_lvlpjg.svg"
               alt=""
               width="100%"
             /> */}
-            {/* <iframe
-              src="https://www.youtube.com/embed/9knXaWFC-FQ"
-              title="Zeeooh Demo"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              className="iframe-test"
-            ></iframe> */}
             <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/9knXaWFC-FQ?controls=0"
-              title="Zeeooh Demo"
+              src="https://www.youtube.com/embed/4Z4xkMVV7PE"
+              title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               className="iframe-test"

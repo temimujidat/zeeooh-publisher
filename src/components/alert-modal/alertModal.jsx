@@ -21,7 +21,7 @@ const AlertModal = () => {
       />
       <Modal.Body className="alerter">
         {alertState === 'alert-success-verify-email'
-          ? 'Check your mail for a verification link'
+          ? 'You have successfully sign up on Zeeooh Our product team will contact you within 24hrs to schedule a product demo'
           : alertState === 'alert-success-edit-profile'
           ? 'Profile successfully updated'
           : `Input successfully
