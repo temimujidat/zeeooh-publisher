@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 .sidebar-dropdown-active {
-  background-color: #f5148e;
+  background-color: rgba(254, 65, 39, 0.5);
   color: white;
 }
 .sidebar-dropdown-toggle > * {
