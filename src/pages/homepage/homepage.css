@@ -1,12 +1,6 @@
 .obob {
   margin: 0 0 0 0.5rem;
 }
-.iframe-test {
-  /* position: absolute; */
-  width: 90%;
-  height: 316px;
-  border-radius: 10px;
-}
 .body-container {
   background-image: url('https://res.cloudinary.com/adesanza/image/upload/v1623767456/zabuni/Group_2021_m9it9l.png');
   /* background-image: url('./Group\ 2021\ \(1\).svg'); */
@@ -24,6 +18,10 @@
 .header-text > span {
   font-weight: 800;
 }
+
+/* startijng from heret on the brught in css that i have done */
+
+/* ghdgh */
 .iframe-test {
   width: 95%;
   height: 346px;
@@ -50,7 +48,42 @@
   justify-content: center;
   white-space: nowrap;
   display: flex;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 52px;
+  /* identical to box height, or 144% */
+
+  color: #1a0e60;
 }
 .publisher-box {
   display: flex;
+}
+.butter-start {
+  background: #fe4127;
+  box-shadow: 0px 3px 3px rgba(26, 14, 96, 0.12);
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #ffffff;
+  padding: 15px 45px;
+  border: none;
+  margin-right: 30px;
+}
+.butter-log {
+  background: #ffffff;
+  box-shadow: 0px 3px 3px rgba(26, 14, 96, 0.12);
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #0056b3;
+  padding: 15px 45px;
+  border: none;
+  margin: auto;
 }

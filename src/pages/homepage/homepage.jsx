@@ -1,16 +1,20 @@
 import './homepage.css';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+// import { AiOutlineArrowRight } from 'react-icons/ai';
+import { useDispatch } from 'react-redux';
+// import { Link, useHistory } from 'react-router-dom';
+import { verticalModalContent } from '../../redux/vertical-modal/verticalModalReducer';
 
 const Homepage = () => {
+  const dispatch = useDispatch();
   return (
     <>
       <div className="taking">
         <div className="row">
           <div className="col-md-7 ">
             <h1 className="grow">
-              Zeeooh has a major OOH
+              As a publisher your assets get
               <br />
-              <span>publishers for your service</span>
+              <span>booked on by agencies and brands</span>
             </h1>
             <p className="texti">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam,
@@ -19,9 +23,25 @@ const Homepage = () => {
               Accusantium, repellat. Magni, deleniti omnis.
             </p>
             <div className="olab">
-              <button className="homeb start2">
-                Learn How <AiOutlineArrowRight className="obob" />
+              <button
+                className="butter-start"
+                onClick={() => dispatch(verticalModalContent('signup'))}
+              >
+                Sign Up
               </button>
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#myModal"
+                className="butter-log"
+                onClick={() => dispatch(verticalModalContent('login'))}
+              >
+                Login
+                {/* as <RiArrowDownSLine className="ArrowDown" /> */}
+              </button>
+              {/* <button className="homeb start2">
+                Learn How <AiOutlineArrowRight className="obob" />
+              </button> */}
             </div>
           </div>
           <div className="col-md-5">

@@ -21,7 +21,7 @@ const Header = () => {
             src={
               userState.company_logo
                 ? userState.company_logo
-                : 'https://res.cloudinary.com/adesanza/image/upload/v1623766783/zabuni/Zeeooh_logo_1_wwzhne.svg'
+                : 'https://res.cloudinary.com/adesanza/image/upload/v1624361933/zabuni/Group_bnbco9.svg'
             }
             alt="OE"
           />
@@ -96,7 +96,7 @@ const Header = () => {
       <nav className="navbar fixed-top navbar-expand-sm navbar-light header-nav1">
         <Link className="navbar-brand" to="/">
           <img
-            src="https://res.cloudinary.com/adesanza/image/upload/v1623766783/zabuni/Zeeooh_logo_1_wwzhne.svg"
+            src="https://res.cloudinary.com/adesanza/image/upload/v1624361933/zabuni/Group_bnbco9.svg"
             alt="ZEEOOH"
           />
         </Link>
@@ -109,6 +109,9 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
+          <li className="ml-auto homeer active-home">Publishers</li>
+          <li className="homeer">Agency</li>
+          <li className="homeer">Brands</li>
           <ul className="navbar-nav">
             {/* <div className="searchContainer">
               <BiSearch className="searchIcon" />
@@ -118,15 +121,12 @@ const Header = () => {
                 type="search"
               />
             </div> */}
-            {/* <li className="home">Publishers</li>
-            <li>Agency</li>
-            <li>Brands</li> */}
             <li>
               <button
-                className="homeb start"
+                className="homeb"
                 onClick={() => dispatch(verticalModalContent('signup'))}
               >
-                Sign Up
+                About Us
               </button>
             </li>
             <li>
@@ -134,10 +134,10 @@ const Header = () => {
                 type="button"
                 data-toggle="modal"
                 data-target="#myModal"
-                className="homeb1 start1"
+                className="homeb1"
                 onClick={() => dispatch(verticalModalContent('login'))}
               >
-                Login
+                Contact Us
                 {/* as <RiArrowDownSLine className="ArrowDown" /> */}
               </button>
             </li>
