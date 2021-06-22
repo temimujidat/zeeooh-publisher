@@ -51,10 +51,10 @@ const Homepage = () => {
               width="100%"
             /> */}
             <iframe
-              src="http://www.youtube.com/embed/4Z4xkMVV7PE"
+              src="https://www.youtube.com/embed/4Z4xkMVV7PE"
               title="YouTube video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture"
               className="iframe-test"
               allowfullscreen
             ></iframe>
