@@ -51,7 +51,7 @@ const Homepage = () => {
               width="100%"
             /> */}
             <iframe
-              src="https://www.youtube.com/embed/4Z4xkMVV7PE"
+              src="https://www.youtube-nocookie.com/embed/4Z4xkMVV7PE"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture"
