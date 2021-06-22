@@ -33,6 +33,17 @@
 }
 .group-clientele {
   text-align: center;
+  padding-bottom: 70px;
+}
+.clientele {
+  padding: 50px 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 52px;
+  /* identical to box height, or 173% */
+
+  color: #07031f;
 }
 .circle-client {
   border-radius: 50%;

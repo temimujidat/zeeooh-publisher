@@ -124,7 +124,7 @@ const Header = () => {
             <li>
               <button
                 className="homeb"
-                onClick={() => dispatch(verticalModalContent('signup'))}
+                // onClick={() => dispatch(verticalModalContent('signup'))}
               >
                 About Us
               </button>
@@ -135,7 +135,7 @@ const Header = () => {
                 data-toggle="modal"
                 data-target="#myModal"
                 className="homeb1"
-                onClick={() => dispatch(verticalModalContent('login'))}
+                // onClick={() => dispatch(verticalModalContent('login'))}
               >
                 Contact Us
                 {/* as <RiArrowDownSLine className="ArrowDown" /> */}

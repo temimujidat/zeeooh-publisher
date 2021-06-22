@@ -57,7 +57,7 @@ const VerticalCenterModal = ({ children }) => {
           className="modal-close-btn"
          
         /> */}
-        <div className="ds">header</div>
+        <div className="ds"></div>
         <img
           src="https://res.cloudinary.com/adesanza/image/upload/v1617978093/zabuni/Group_134_upqus9.svg"
           alt="cancel"

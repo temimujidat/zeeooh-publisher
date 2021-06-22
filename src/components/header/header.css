@@ -89,10 +89,6 @@ a:hover {
   color: #fff;
 }
 
-.start,
-.start2 {
-  color: #ececec;
-}
 .start2 {
   margin: 5px;
   font-size: 24px;
@@ -179,7 +175,8 @@ footer h3 {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  color: #1a0e60;
+  color: #fff;
+  margin-bottom: 8px;
 }
 .bolar {
   margin: 30px 30px 0 0;
@@ -235,6 +232,7 @@ input[type='search']::-webkit-search-results-decoration {
   font-weight: normal;
   font-size: 14px;
   line-height: 28px;
+  color: #fff;
 }
 .user-options {
   margin: 0;
@@ -244,6 +242,7 @@ input[type='search']::-webkit-search-results-decoration {
   text-transform: capitalize;
 }
 .homeer {
+  cursor: pointer;
   list-style-type: none;
   font-style: normal;
   font-weight: 600;
