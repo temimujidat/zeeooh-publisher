@@ -27,7 +27,7 @@ const Homepage = () => {
                 className="butter-start"
                 onClick={() => dispatch(verticalModalContent('signup'))}
               >
-                Sign Up
+                Request a Demo
               </button>
               <button
                 type="button"
@@ -36,7 +36,7 @@ const Homepage = () => {
                 className="butter-log"
                 onClick={() => dispatch(verticalModalContent('login'))}
               >
-                Login
+                Login as Publisher
                 {/* as <RiArrowDownSLine className="ArrowDown" /> */}
               </button>
               {/* <button className="homeb start2">
@@ -51,7 +51,7 @@ const Homepage = () => {
               width="100%"
             /> */}
             <iframe
-              src="https://www.youtube.com/embed/4Z4xkMVV7PE"
+              src="http://www.youtube.com/embed/4Z4xkMVV7PE"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
