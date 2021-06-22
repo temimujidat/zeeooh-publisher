@@ -118,9 +118,9 @@ const Header = () => {
                 type="search"
               />
             </div> */}
-            <li className="home">Publishers</li>
+            {/* <li className="home">Publishers</li>
             <li>Agency</li>
-            <li>Brands</li>
+            <li>Brands</li> */}
             <li>
               <button
                 className="homeb start"

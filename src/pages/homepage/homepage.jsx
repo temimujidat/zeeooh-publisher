@@ -41,55 +41,33 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="">
-          <h3 id="feature" className="differ">
-            Clientele
-          </h3>
-          <div className="row">
-            <div className="col-md-4">
-              <center>
-                <img
-                  src="https://res.cloudinary.com/adesanza/image/upload/v1615074243/zabuni/Group_276_srz2ti.svg"
-                  alt=""
-                  height="244px"
-                  width="236px"
-                />
-                <span>
-                  <p id="advert">
-                    Set Your Advert Channels
-                    <br />& Budget
-                  </p>
-                </span>
-              </center>
-            </div>
-            <div className="col-md-4">
-              <center>
-                <img
-                  src="https://res.cloudinary.com/adesanza/image/upload/v1615074238/zabuni/Group_277_d5rlrd.svg"
-                  alt=""
-                  height="244px"
-                  width="236px"
-                />
-                <span>
-                  <p id="advert">
-                    Our Adverts Expert <br />
-                    Contacts you
-                  </p>
-                </span>
-              </center>
-            </div>
-            <div className="col-md-4">
-              <center>
-                <img
-                  src="https://res.cloudinary.com/adesanza/image/upload/v1615074235/zabuni/Agreement-rafiki_mxyxgd.svg"
-                  alt=""
-                  height="244px"
-                  width="236px"
-                />
-                <p id="advert">Close The Deal</p>
-              </center>
-            </div>
+      <div className="group-clientele">
+        <h2 className="clientele">Clientele</h2>
+        <div className="row tiers">
+          <div className="col-md-4">
+            <div className="circle-client">20</div>
+            <h3>Publishers</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quasi
+              tempore ea eveniet sint nesciunt ipsa necessitatibus saepe
+              doloribus explicabo hic, at ex repellat, nisi
+            </p>
+          </div>
+          <div className="col-md-4 col-sm-12">
+            <div className="circle-client">10</div>
+            <h3>Agency</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quasi
+              tempore ea eveniet sint nesciunt ipsa necessitatibus saepe
+            </p>
+          </div>
+          <div className="col-md-4 col-sm-12">
+            <div className="circle-client">19</div>
+            <h3>Brands</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quasi
+              tempore ea eveniet sint nesciunt ipsa necessitatibus saepe
+            </p>
           </div>
         </div>
       </div>
@@ -124,7 +102,7 @@ const Homepage = () => {
 
         <div className="col-md-6 align-self-end">
           <p className="reserved">
-            Copyright @ 2021, Zabuni NG. All right reserved
+            Copyright @ 2021, Zeeooh NG. All right reserved
           </p>
         </div>
       </footer>

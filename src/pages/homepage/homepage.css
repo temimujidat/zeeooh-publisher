@@ -7,3 +7,50 @@
   height: 316px;
   border-radius: 10px;
 }
+.body-container {
+  background-image: url('https://res.cloudinary.com/adesanza/image/upload/v1623767456/zabuni/Group_2021_m9it9l.png');
+  /* background-image: url('./Group\ 2021\ \(1\).svg'); */
+  /* height: 500px; */
+  width: 100%;
+  padding: 180px 50px 130px 80px;
+}
+.header-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 63px;
+  line-height: 72px;
+  color: #ffffff;
+}
+.header-text > span {
+  font-weight: 800;
+}
+.iframe-test {
+  width: 95%;
+  height: 346px;
+  border-radius: 10px;
+}
+.tiers {
+  display: flex;
+  margin: 0 100px;
+}
+.group-clientele {
+  text-align: center;
+}
+.circle-client {
+  border-radius: 50%;
+  background-color: rgba(254, 65, 39, 0.2);
+  /* width: 130px; */
+  /* height: 132px; */
+  width: 150px;
+  height: 150px;
+  /* justify-self: center; */
+  margin: auto;
+  /* vertical-align: middle; */
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  display: flex;
+}
+.publisher-box {
+  display: flex;
+}
