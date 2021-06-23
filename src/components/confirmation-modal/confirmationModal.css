@@ -8,7 +8,7 @@
   color: #393333;
 }
 .gena {
-  border: 0.5px solid #1a0e60;
+  border: 0.5px solid #0056b3;
   /* box-sizing: border-box; */
   filter: drop-shadow(0px 2px 2px rgba(181, 8, 65, 0.08));
   border-radius: 10px;
@@ -21,9 +21,9 @@
   margin: 25px;
   /* background-color: #ffffff; */
 
-  color: #1a0e60;
+  color: #0056b3;
 }
 .gena:hover {
-  background-color: #1a0e60;
+  background-color: #0056b3;
   color: #ffffff;
 }

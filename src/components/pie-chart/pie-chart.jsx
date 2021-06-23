@@ -24,7 +24,7 @@ const PieChart = ({ pieLabels, pieData }) => {
             data: [...pieData],
             backgroundColor: [
               '#342929',
-              '#f5148e',
+              '#FE4127',
               '#FFB800',
               '#24F25E',
               '#fff',

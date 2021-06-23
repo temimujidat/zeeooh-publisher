@@ -10,6 +10,7 @@ import {
   showStateData,
   showLgaData,
   showCityData,
+  showTypeData,
 } from '../../redux/form/billboardFormReducer';
 import { overheadModalContainer } from '../../redux/overhead-modal/overheadModalReducer';
 import { setAlertContent } from '../../redux/alert/alertPopupReducer';
@@ -19,6 +20,11 @@ import billboardDataApi, {
 } from '../../utils/billboard-table/billboard-api';
 import { useBillboardData } from '../../hooks/billboard-data-hook';
 import { useRef, useState, useEffect } from 'react';
+import { getAllCategories } from '../../utils/form/category-type';
+import {
+  formatBillboardCategory,
+  formatBillboardType,
+} from '../../utils/billboard-table/format-text';
 
 const BillboardForm = () => {
   const { _id } = useSelector((state) => state.user);
@@ -29,7 +35,8 @@ const BillboardForm = () => {
   const [imageUploadSuccess, setImageUploadSuccess] = useState('');
   const { billboardData } = useBillboardData();
   const formDataState = useSelector((state) => state.billboardForm);
-  const { isEditing, formData, stateData, lgaData, cityData } = formDataState;
+  const { isEditing, formData, stateData, lgaData, cityData, typeData } =
+    formDataState;
   const dispatch = useDispatch();
   useEffect(
     () => {
@@ -248,6 +255,30 @@ const BillboardForm = () => {
               </Form.Group>
             </Form.Row>
             <Form.Row>
+              <Form.Group as={Col} controlId="controlSelectCategory">
+                <Form.Label className="form-label">Category</Form.Label>
+                <Form.Control
+                  as="select"
+                  name="category"
+                  value={values.category}
+                  onChange={(e) => {
+                    dispatch(showTypeData(e.target.value));
+                    handleChange(e);
+                  }}
+                  onBlur={handleBlur}
+                  className="formf"
+                >
+                  <option value="">Select Category</option>
+                  {getAllCategories().map((category) => (
+                    <option key={category} value={category}>
+                      {formatBillboardCategory(category)}
+                    </option>
+                  ))}
+                </Form.Control>
+                <Form.Text className="text-danger text-left">
+                  {touched.category && errors.category ? errors.category : null}
+                </Form.Text>
+              </Form.Group>
               <Form.Group as={Col} controlId="controlSelectType">
                 <Form.Label className="form-label">Type</Form.Label>
                 <Form.Control
@@ -259,47 +290,14 @@ const BillboardForm = () => {
                   className="formf"
                 >
                   <option value="">Type</option>
-                  <option value="led">LED</option>
-                  <option value="lightbox">Lightbox</option>
-                  <option value="bridge_panel">Bridge Panel</option>
-                  <option value="eye_catcher">Eye Catcher</option>
-                  <option value="mega_board">Mega board</option>
-                  <option value="gantry">Gantry</option>
-                  <option value="portrait">Portrait</option>
-                  <option value="rooftop">Rooftop</option>
-                  <option value="super48_sheet">Super 48 sheet</option>
-                  <option value="ultrawave">Ultra wave</option>
-                  <option value="video_wall">Video wall</option>
-                  <option value="wall_drape">Wall Drape</option>
-                  <option value="unipole">Unipole</option>
+                  {typeData.map((type) => (
+                    <option key={type} value={type}>
+                      {formatBillboardType(type)}
+                    </option>
+                  ))}
                 </Form.Control>
                 <Form.Text className="text-danger text-left">
                   {touched.type && errors.type ? errors.type : null}
-                </Form.Text>
-              </Form.Group>
-              <Form.Group as={Col} controlId="controlSelectStatus">
-                <Form.Label className="form-label">Status</Form.Label>
-                <Form.Control
-                  as="select"
-                  name="status"
-                  value={values.status}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className="formf"
-                >
-                  <option value="">Status</option>
-                  <option value="active" className="active-status">
-                    Active
-                  </option>
-                  <option value="inactive" className="inactive-status">
-                    Inactive
-                  </option>
-                  <option value="vacant" className="vacant-status">
-                    Vacant
-                  </option>
-                </Form.Control>
-                <Form.Text className="text-danger text-left">
-                  {touched.status && errors.status ? errors.status : null}
                 </Form.Text>
               </Form.Group>
             </Form.Row>
@@ -380,21 +378,29 @@ const BillboardForm = () => {
               </Form.Group>
             </Form.Row>
             <Form.Row>
-              <Form.Group as={Col} controlId="controlSelectCategory">
-                <Form.Label className="form-label">Category</Form.Label>
+              <Form.Group as={Col} controlId="controlSelectStatus">
+                <Form.Label className="form-label">Status</Form.Label>
                 <Form.Control
                   as="select"
-                  name="category"
-                  value={values.category}
+                  name="status"
+                  value={values.status}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className="formf"
                 >
-                  <option value="">Category</option>
-                  <option value="billboard">Billboard</option>
+                  <option value="">Status</option>
+                  <option value="active" className="active-status">
+                    Active
+                  </option>
+                  <option value="inactive" className="inactive-status">
+                    Inactive
+                  </option>
+                  <option value="vacant" className="vacant-status">
+                    Vacant
+                  </option>
                 </Form.Control>
                 <Form.Text className="text-danger text-left">
-                  {touched.category && errors.category ? errors.category : null}
+                  {touched.status && errors.status ? errors.status : null}
                 </Form.Text>
               </Form.Group>
               <Form.Group as={Col} controlId="controlSelectClass">

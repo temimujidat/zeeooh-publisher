@@ -27,6 +27,7 @@ const SignupForm = () => {
         company_phone: '',
         email: '',
         password: '',
+        passwordConfirmation: '',
       }}
       onSubmit={(values, { setSubmitting, setFieldError }) => {
         setSubmitting(true);
@@ -144,6 +145,22 @@ const SignupForm = () => {
               />
               <Form.Text className="text-danger">
                 {touched.password && errors.password ? errors.password : null}
+              </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="formBasicConfirmPassword">
+              {/* <BsEyeSlash className="" /> */}
+              <Form.Control
+                type="password"
+                placeholder="Confirm Password"
+                name="passwordConfirmation"
+                value={values.passwordConfirmation}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <Form.Text className="text-danger">
+                {touched.passwordConfirmation && errors.passwordConfirmation
+                  ? errors.passwordConfirmation
+                  : null}
               </Form.Text>
             </Form.Group>
             <Button type="submit" block className="signup-submit-btn">

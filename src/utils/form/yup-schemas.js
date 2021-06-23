@@ -37,6 +37,12 @@ export const createBillboardSchema = Yup.object().shape({
         'video_wall',
         'wall_drape',
         'gantry',
+        'wall_scrape',
+        'wall_drape',
+        'building_wrap',
+        'street_lamp_post',
+        'bus_shelter',
+        'bus_rapid_transit',
       ],
       'Invalid type'
     )
@@ -49,7 +55,16 @@ export const createBillboardSchema = Yup.object().shape({
     .oneOf(['active', 'inactive', 'vacant'], 'Invalid status')
     .required('Must select an option'),
   category: Yup.string()
-    .oneOf(['billboard'], 'Invalid status')
+    .oneOf(
+      [
+        'billboard',
+        'constructionAdvert',
+        'lampPost',
+        'streetFurniture',
+        'transitAdvert',
+      ],
+      'Invalid category'
+    )
     .required('Must select an option'),
   class: Yup.string()
     .oneOf(['digital', 'static'], 'Invalid status')
@@ -117,6 +132,10 @@ export const registerScehma = Yup.object().shape({
       /^[a-zA-Z0-9]{5,30}$/,
       'Password must contain only alphabets or numbers and must be longer than 5 characters'
     ),
+  passwordConfirmation: Yup.string().oneOf(
+    [Yup.ref('password'), null],
+    'Passwords must match'
+  ),
 });
 
 export const editProfileSchema = Yup.object().shape({

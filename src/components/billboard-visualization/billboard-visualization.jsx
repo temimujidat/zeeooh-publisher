@@ -31,60 +31,14 @@ const BillboardDataVisuals = ({
     0
   );
 
-  let billboardTypesArr = [
-    {
-      title: 'Bridge panel',
-      count: billboardTypes.bridge_panel || 0,
+  let billboardTypesArr = _.reduce(
+    billboardTypes,
+    (result, value, key) => {
+      result.push({ boardType: key, boardTypeCount: value });
+      return result;
     },
-    {
-      title: 'Eye catcher',
-      count: billboardTypes.eye_catcher || 0,
-    },
-    {
-      title: 'Gantry',
-      count: billboardTypes.gantry || 0,
-    },
-    {
-      title: 'LED',
-      count: billboardTypes.led || 0,
-    },
-    {
-      title: 'Lightbox',
-      count: billboardTypes.lightbox || 0,
-    },
-    {
-      title: 'Mega board',
-      count: billboardTypes.mega_board || 0,
-    },
-    {
-      title: 'Portrait',
-      count: billboardTypes.portrait || 0,
-    },
-    {
-      title: 'Rooftop',
-      count: billboardTypes.rooftop || 0,
-    },
-    {
-      title: 'Super 48 sheet',
-      count: billboardTypes.super48_sheet || 0,
-    },
-    {
-      title: 'Ultrawave',
-      count: billboardTypes.ultrawave || 0,
-    },
-    {
-      title: 'Unipole',
-      count: billboardTypes.unipole || 0,
-    },
-    {
-      title: 'Video wall',
-      count: billboardTypes.video_wall || 0,
-    },
-    {
-      title: 'Wall drape',
-      count: billboardTypes.wall_drape || 0,
-    },
-  ];
+    []
+  );
 
   const pieReduce = _.reduce(
     billboardRegions,
@@ -105,10 +59,10 @@ const BillboardDataVisuals = ({
       result.datasets[0].data.push(value.active || 0);
       result.datasets[1].data.push(value.inactive || 0);
       result.datasets[2].data.push(value.vacant || 0);
-      result.datasets[0].backgroundColor.push('#f5148e');
-      result.datasets[0].borderColor.push('#f5148e');
-      result.datasets[1].backgroundColor.push('#1A0E60');
-      result.datasets[1].borderColor.push('#1A0E60');
+      result.datasets[0].backgroundColor.push('#FE4127');
+      result.datasets[0].borderColor.push('#FE4127');
+      result.datasets[1].backgroundColor.push('#0056b3');
+      result.datasets[1].borderColor.push('#0056b3');
       result.datasets[2].backgroundColor.push('#24f25e');
       result.datasets[2].borderColor.push('#24f25e');
       return result;
@@ -216,7 +170,7 @@ const BillboardDataVisuals = ({
         <div className="col total">
           <p className="total-title">Total</p>
           <CircleVisual
-            bgColor={'#f7f6fb'}
+            bgColor={'rgba(254, 65, 39, 0.15)'}
             textColor={'#f514be'}
             text={billboardCount}
           />
@@ -232,13 +186,15 @@ const BillboardDataVisuals = ({
           <p className="types-title">Types</p>
           <div className="types-container">
             {billboardTypesArr.map((billboardType, idx) => (
-              <div className="types-active" key={billboardType.title}>
+              <div className="types-active" key={billboardType.boardType}>
                 <CircleVisual
-                  bgColor={idx % 2 === 0 ? '#e3bde0' : '#0057b377'}
-                  textColor={idx % 2 === 0 ? '#f5148e' : '#fff'}
-                  text={billboardType.count}
+                  bgColor={
+                    idx % 2 === 0 ? 'rgba(254, 65, 39, 0.15)' : '#0057b377'
+                  }
+                  textColor={idx % 2 === 0 ? '#FE4127' : '#fff'}
+                  text={billboardType.boardTypeCount}
                 />
-                <p>{billboardType.title}</p>
+                <p>{formatBillboardType(billboardType.boardType)}</p>
               </div>
             ))}
           </div>
@@ -246,7 +202,7 @@ const BillboardDataVisuals = ({
       </div>
       <div className="row folker">
         <div className="col billboards">
-          <p className="billboard-title">Regions and number of Billboards</p>
+          <p className="billboard-title">Region and number of Assets</p>
           <PieChart
             pieLabels={pieReduce.regions}
             pieData={pieReduce.regionCount}

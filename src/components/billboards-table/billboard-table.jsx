@@ -9,6 +9,7 @@ import {
   formatBillboardLocation,
   formatBillboardState,
   formatBillboardType,
+  formatBillboardCategory,
   formatBillboardRegion,
 } from '../../utils/billboard-table/format-text';
 import { overheadModalContainer } from '../../redux/overhead-modal/overheadModalReducer';
@@ -98,7 +99,7 @@ const BillboardsTable = ({
           {isLoadingData ? (
             <tr className="table-loading">
               <td colSpan={100}>
-                <RingLoader borderColor="#1A0E60" />
+                <RingLoader borderColor="#0056b3" />
               </td>
             </tr>
           ) : (
@@ -145,7 +146,9 @@ const BillboardsTable = ({
                 >
                   {details.status}
                 </td>
-                <td className="fonter">{details.category}</td>
+                <td className="fonter">
+                  {formatBillboardCategory(details.category)}
+                </td>
                 <td className="fonter">{details.class}</td>
                 <td className="fonter">{details.face}</td>
                 <td className="fonter">{details.slot}</td>

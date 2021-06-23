@@ -1,6 +1,6 @@
 :root {
-  --generic-blue: #1a0e60;
-  --generic-pink: #f5148e;
+  --generic-blue: #0056b3;
+  --generic-pink: #fe4127;
 }
 
 .dayo {
@@ -28,7 +28,7 @@
 .lolo {
   width: 426px;
   /* height: 233px; */
-  /* border: 0.5px solid #1A0E60; */
+  /* border: 0.5px solid #0056b3; */
   box-sizing: border-box;
   border-radius: 10px;
   cursor: pointer;

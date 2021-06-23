@@ -31,7 +31,14 @@ const billboardFilter = (filterData, billboardData, tablePage, tableSize) => {
       return paginateBillboard(
         tablePage,
         tableSize,
-        billboardData.sort((a, b) => {
+        (filterData.category === 'all'
+          ? billboardData
+          : billboardData.filter(
+              (details) =>
+                details.category.toLowerCase() ===
+                filterData.category.toLowerCase()
+            )
+        ).sort((a, b) => {
           let splitKeyword = filterData.keyword.split('-');
           let propA =
             splitKeyword[0] !== 'amount'

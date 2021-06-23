@@ -19,7 +19,7 @@ table tbody tr:hover {
   /* white-space: nowrap; */
   line-height: 12px;
   text-transform: uppercase;
-  /* background-color: #1A0E60; */
+  /* background-color: #0056b3; */
   color: #ffffff;
 }
 table th:first-child {
@@ -58,7 +58,7 @@ table th:last-child {
   margin: 0;
   /* padding: 1 .48rem; */
   /* text-transform: uppercase; */
-  background-color: #f5148e;
+  background-color: #fe4127;
   letter-spacing: 1px;
   border-radius: 5px;
   border: 0;
@@ -70,7 +70,7 @@ table th:last-child {
 .create-billboard-btn:hover,
 .create-billboard-btn:not(:disabled):not(.disabled):active,
 .create-billboard-btn:focus {
-  background-color: #f5148e;
+  background-color: #fe4127;
 }
 
 .edit-delete-container {
@@ -132,10 +132,10 @@ table th:last-child {
   text-align: center;
 }
 .active {
-  color: #f5148e;
+  color: #fe4127;
 }
 .inactive {
-  color: #1a0e60;
+  color: #0056b3;
 }
 .vacant {
   color: #24f25e;
@@ -168,7 +168,7 @@ table th:last-child {
 
 .sort-btn-up,
 .sort-btn-down {
-  /* border: 1px solid #f5148e; */
+  /* border: 1px solid #FE4127; */
   font-size: 0.78rem;
   /* line-height: 0.45rem; */
   /* display: inline-block; */

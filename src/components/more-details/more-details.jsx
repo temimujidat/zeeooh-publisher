@@ -1,7 +1,10 @@
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { formatBillboardType } from '../../utils/billboard-table/format-text';
+import {
+  formatBillboardCategory,
+  formatBillboardType,
+} from '../../utils/billboard-table/format-text';
 import BillboardPdfDetails from '../pdf-doc/pdf-doc';
 import './more-details.css';
 
@@ -75,7 +78,9 @@ const MoreDetails = () => {
         <div className="row justify-content-between dayo">
           <p>
             Category:{' '}
-            <span className="form-data-style">{formData.category}</span>
+            <span className="row dayo-add">
+              {formatBillboardCategory(formData.category)}
+            </span>
           </p>
           <p>
             Class: <span className="form-data-style">{formData.class}</span>

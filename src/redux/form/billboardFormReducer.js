@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import categoryTypeData from '../../utils/form/category-type';
 import {
   getRegionState,
   getStateLga,
@@ -34,6 +35,7 @@ const init = {
   stateData: [],
   lgaData: [],
   cityData: [],
+  typeData: [],
 };
 
 const billboardFormReducer = createSlice({
@@ -58,6 +60,7 @@ const billboardFormReducer = createSlice({
           lga: action.payload.lga,
         }),
       ];
+      state.typeData = [...categoryTypeData[state.formData.category]];
     },
     showStateData: (state, action) => {
       state.currentRegion = action.payload;
@@ -76,6 +79,11 @@ const billboardFormReducer = createSlice({
         }),
       ];
     },
+    showTypeData: (state, action) => {
+      state.typeData = action.payload
+        ? [...categoryTypeData[action.payload]]
+        : [];
+    },
     resetBillboardFormData: (state, action) => init,
   },
 });
@@ -85,6 +93,7 @@ export const {
   showStateData,
   showLgaData,
   showCityData,
+  showTypeData,
   resetBillboardFormData,
 } = billboardFormReducer.actions;
 

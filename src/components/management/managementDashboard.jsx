@@ -26,7 +26,7 @@ const ManagementDashboard = () => {
         <div className="col-md-4 p-0">
           {isLoading ? (
             <div className="loading-container">
-              <RingLoader borderColor="#1A0E60" />
+              <RingLoader borderColor="#0056b3" />
             </div>
           ) : !isLoading &&
             !billboardGeneralInfo.billboard_info.billboardCount ? (

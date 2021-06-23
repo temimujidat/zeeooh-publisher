@@ -53,10 +53,10 @@ const Homepage = () => {
             <iframe
               src="https://www.youtube-nocookie.com/embed/4Z4xkMVV7PE"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture"
               className="iframe-test"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
