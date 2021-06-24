@@ -24,8 +24,10 @@ const formatBillboardType = (type) => {
       return 'Bus Shelter';
     case 'bus_rapid_transit':
       return 'Bus Rapid Transit';
-    case 'light_box':
+    case 'lightbox':
       return 'Light Box';
+    case 'mobile_led':
+      return 'Mobile LED';
     default:
       return type;
   }

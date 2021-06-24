@@ -4,6 +4,7 @@ const categoryTypeData = {
     'lightbox',
     'bridge_panel',
     'eye_catcher',
+    'mobile_led',
     'mega_board',
     'portrait',
     'rooftop',

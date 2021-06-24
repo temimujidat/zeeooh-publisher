@@ -109,9 +109,17 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
-          <li className="ml-auto homeer active-home">Publishers</li>
-          <li className="homeer">Agency</li>
-          <li className="homeer">Brands</li>
+          <Link
+            className="ml-auto homeer active-home"
+            // onClick={() => {
+            //   dispatch(verticalModalContent('edit-user-profile'));
+            // }}
+            to="/"
+          >
+            Publishers
+          </Link>
+          <Link className="homeer">Agency</Link>
+          <Link className="homeer">Brands</Link>
           <ul className="navbar-nav">
             {/* <div className="searchContainer">
               <BiSearch className="searchIcon" />

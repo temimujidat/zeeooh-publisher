@@ -29,6 +29,7 @@ export const createBillboardSchema = Yup.object().shape({
         'bridge_panel',
         'eye_catcher',
         'mega_board',
+        'mobile_led',
         'portrait',
         'rooftop',
         'super48_sheet',

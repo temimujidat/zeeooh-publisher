@@ -236,11 +236,11 @@ input[type='search']::-webkit-search-results-decoration {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  /* identical to box height, or 114% */
 
   color: #07031f;
   margin: 0 30px;
 }
-.active-home {
+.active-home,
+.homeer:hover {
   color: #0056b3;
 }
