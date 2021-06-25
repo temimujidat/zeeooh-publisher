@@ -91,39 +91,46 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <footer className="row taking1">
-        <div className="col-md-2">
-          <ul>
-            <h3 id="pink">COMPANY</h3>
-            <li>About</li>
-            <li>Press</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy</li>
-          </ul>
-        </div>
-        <div className="col-md-2">
-          <ul>
-            <h3 id="pink">CHANNELS</h3>
-            <li>Taxi Tv</li>
-            <li>Mobile Screens</li>
-            <li>Digital Boards</li>
-            <li>LED Cubes</li>
-          </ul>
-        </div>
-        <div className="col-md-2">
-          <ul>
-            <h3 id="pink">SITEMAP</h3>
-            <li>Cancellation</li>
-            <li>Site Map</li>
-            <li>Services</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
+      <footer className="taking1">
+        <img
+          src="https://res.cloudinary.com/adesanza/image/upload/v1624361933/zabuni/Group_bnbco9.svg"
+          alt="footerpic"
+          className="footer-image"
+        />
+        <div className="row">
+          <div className="col-md-2">
+            <ul>
+              <h3 id="pink">COMPANY</h3>
+              <li>About</li>
+              <li>Press</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy</li>
+            </ul>
+          </div>
+          <div className="col-md-2">
+            <ul>
+              <h3 id="pink">CHANNELS</h3>
+              <li>Taxi Tv</li>
+              <li>Mobile Screens</li>
+              <li>Digital Boards</li>
+              <li>LED Cubes</li>
+            </ul>
+          </div>
+          <div className="col-md-2">
+            <ul>
+              <h3 id="pink">SITEMAP</h3>
+              <li>Cancellation</li>
+              <li>Site Map</li>
+              <li>Services</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
 
-        <div className="col-md-6 align-self-end">
-          <p className="reserved">
-            Copyright @ 2021, Zeeooh NG. All right reserved
-          </p>
+          <div className="col-md-6 align-self-end">
+            <p className="reserved">
+              Copyright @ 2021, Zeeooh NG. All right reserved
+            </p>
+          </div>
         </div>
       </footer>
     </>

@@ -2,6 +2,8 @@ const formatBillboardType = (type) => {
   switch (type) {
     case 'led':
       return 'LED';
+    case 'gantry':
+      return 'Gantry';
     case 'bridge_panel':
       return 'Bridge Panel';
     case 'eye_catcher':

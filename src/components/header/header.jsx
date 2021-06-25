@@ -115,11 +115,16 @@ const Header = () => {
             //   dispatch(verticalModalContent('edit-user-profile'));
             // }}
             to="/"
+            alt="pub"
           >
             Publishers
           </Link>
-          <Link className="homeer">Agency</Link>
-          <Link className="homeer">Brands</Link>
+          <Link className="homeer" to="https://agency.zeeooh.com/" alt="agency">
+            Agency
+          </Link>
+          <Link className="homeer" to="https://brand.zeeooh.com/" alt="brand">
+            Brands
+          </Link>
           <ul className="navbar-nav">
             {/* <div className="searchContainer">
               <BiSearch className="searchIcon" />

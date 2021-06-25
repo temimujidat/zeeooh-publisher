@@ -1,6 +1,9 @@
 import _ from 'lodash';
 import { useState } from 'react';
-import { formatBillboardType } from '../../utils/billboard-table/format-text';
+import {
+  formatBillboardRegion,
+  formatBillboardType,
+} from '../../utils/billboard-table/format-text';
 import ControlBarchartDisplay from '../bar-chart-selection/bar-chart-selection';
 import BarChart from '../bar-chart/bar-chart';
 import DoughnutChart from '../doughnut-chart/doughnut-chart';
@@ -43,7 +46,9 @@ const BillboardDataVisuals = ({
   const pieReduce = _.reduce(
     billboardRegions,
     function (result, value, key) {
-      result.regions.push(`${key[0].toUpperCase()}${key.substr(1)}`);
+      result.regions.push(
+        formatBillboardRegion(`${key[0].toUpperCase()}${key.substr(1)}`)
+      );
       result.regionCount.push(value);
       return result;
     },

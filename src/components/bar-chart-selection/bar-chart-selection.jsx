@@ -10,6 +10,7 @@ const StatesContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-transform: captitalize;
 
   & p {
     text-transform: capitalize;
@@ -20,12 +21,14 @@ const StatesContainer = styled.div`
     font-weight: normal;
     font-size: 13px;
     line-height: 24px;
+    text-transform: captitalize;
 
     &:nth-of-type(${(props) => props.currStateIdx + 1}) {
       border-bottom: 2px solid #0056b3;
       color: #0056b3;
       font-weight: bold;
       padding: 0 0.31rem;
+      text-transform: captitalize;
     }
   }
 `;
