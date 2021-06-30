@@ -9,6 +9,12 @@
 }
 .vertical-modal-others {
   width: 575px;
+  margin-top: 65px;
+}
+@media screen and (max-width: 451px) {
+  .vertical-modal-others {
+    width: auto;
+  }
 }
 .vertical-modal-body {
   margin: 0 3rem;

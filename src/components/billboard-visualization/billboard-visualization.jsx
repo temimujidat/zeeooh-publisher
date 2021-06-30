@@ -23,6 +23,7 @@ const BillboardDataVisuals = ({
   },
 }) => {
   const [currentState, setCurrState] = useState(billboardStatesStatus[0]);
+  console.log('ccc', billboardStatesStatus);
   let billboardDigitalTotal = _.reduce(
     billboardClass.digital,
     (result, value) => result + value,

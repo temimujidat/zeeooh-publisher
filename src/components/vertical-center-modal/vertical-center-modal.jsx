@@ -43,13 +43,13 @@ const VerticalCenterModal = ({ children }) => {
   return (
     <Modal
       show={modalState.show}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       // centered
       contentClassName={`vertical-modal ${
         modalState.type === 'edit-user-profile' ? '' : 'vertical-modal-others'
       }`}
-      animation={false}
+      animation={true}
       onHide={handleCloseModal}
     >
       <Modal.Header>

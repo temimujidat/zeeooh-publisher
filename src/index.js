@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/scss/forms/_floating-labels.scss';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import CssBaseline from '@material-ui/core/CssBaseline/index';
+import { StylesProvider } from '@material-ui/core/styles';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,7 +16,10 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <React.StrictMode>
-        <App />
+        <CssBaseline />
+        <StylesProvider injectFirst>
+          <App />
+        </StylesProvider>
       </React.StrictMode>
     </Router>
   </Provider>,

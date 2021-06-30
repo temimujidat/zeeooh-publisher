@@ -2,15 +2,29 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { verticalModalContent } from '../../redux/vertical-modal/verticalModalReducer';
 import './header.css';
-// import { BiSearch } from 'react-icons/bi';
-// import { RiArrowDownSLine } from 'react-icons/ri';
 import { CgProfile } from 'react-icons/cg';
 import { resetDashboard } from '../../redux/dashboard/dashboardReducer';
 import { useUserData } from '../../hooks/user-hook';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { useState } from 'react';
+import SideNav from '../side-nav/side-nav';
+import {
+  StyledHeaderBar,
+  StyledHeaderToolBar,
+  HeaderLogoContainer,
+  HeaderNavigationContainer,
+  HeaderNavLinkContainer,
+  HeaderNavLink,
+  HeaderNavBtnContainer,
+  HeaderNavBtn,
+  HeaderNavigationHambugerContainer,
+} from './header.styled';
 
 const Header = () => {
   const dispatch = useDispatch();
   let history = useHistory();
+  const [showRightDrawer, setShowRightDrawer] = useState(false);
   const userState = useSelector((state) => state.user);
   const { logUserOut } = useUserData();
   return userState ? (
@@ -92,72 +106,42 @@ const Header = () => {
       </nav>
     </header>
   ) : (
-    <header>
-      <nav className="navbar fixed-top navbar-expand-sm navbar-light header-nav1">
-        <Link className="navbar-brand" to="/">
+    <StyledHeaderBar>
+      <StyledHeaderToolBar>
+        <HeaderLogoContainer to="/">
           <img
             src="https://res.cloudinary.com/adesanza/image/upload/v1624361933/zabuni/Group_bnbco9.svg"
-            alt="ZEEOOH"
+            alt="company logo"
           />
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="collapsibleNavbar">
-          <Link
-            className="ml-auto homeer active-home"
-            // onClick={() => {
-            //   dispatch(verticalModalContent('edit-user-profile'));
-            // }}
-            to="/"
-            alt="pub"
-          >
-            Publishers
-          </Link>
-          <Link className="homeer" to="https://agency.zeeooh.com/" alt="agency">
-            Agency
-          </Link>
-          <Link className="homeer" to="https://brand.zeeooh.com/" alt="brand">
-            Brands
-          </Link>
-          <ul className="navbar-nav">
-            {/* <div className="searchContainer">
-              <BiSearch className="searchIcon" />
-              <input
-                className="searcher"
-                placeholder="Where will you like to place your advert?"
-                type="search"
-              />
-            </div> */}
-            <li>
-              <button
-                className="homeb"
-                // onClick={() => dispatch(verticalModalContent('signup'))}
-              >
-                About Us
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                data-toggle="modal"
-                data-target="#myModal"
-                className="homeb1"
-                // onClick={() => dispatch(verticalModalContent('login'))}
-              >
-                Contact Us
-                {/* as <RiArrowDownSLine className="ArrowDown" /> */}
-              </button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+        </HeaderLogoContainer>
+        <HeaderNavigationContainer>
+          <HeaderNavLinkContainer>
+            <HeaderNavLink href="https://publisher.zeeooh.com" rel="noopener">
+              publisher
+            </HeaderNavLink>
+            <HeaderNavLink href="https://publisher.zeeooh.com" rel="noopener">
+              agency
+            </HeaderNavLink>
+            <HeaderNavLink href="https://publisher.zeeooh.com" rel="noopener">
+              brand
+            </HeaderNavLink>
+          </HeaderNavLinkContainer>
+          <HeaderNavBtnContainer>
+            <HeaderNavBtn propsty="about-btn">about us</HeaderNavBtn>
+            <HeaderNavBtn propsty="contact-btn">contact us</HeaderNavBtn>
+          </HeaderNavBtnContainer>
+        </HeaderNavigationContainer>
+        <HeaderNavigationHambugerContainer>
+          <IconButton onClick={() => setShowRightDrawer(true)}>
+            <MenuIcon />
+          </IconButton>
+        </HeaderNavigationHambugerContainer>
+        <SideNav
+          showRightDrawer={showRightDrawer}
+          closeRightDrawer={() => setShowRightDrawer(false)}
+        />
+      </StyledHeaderToolBar>
+    </StyledHeaderBar>
   );
 };
 

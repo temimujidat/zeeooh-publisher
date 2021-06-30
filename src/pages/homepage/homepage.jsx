@@ -10,7 +10,7 @@ const Homepage = () => {
     <>
       <div className="taking">
         <div className="row">
-          <div className="col-md-7 ">
+          <div className="col-md-7 bom2">
             <h1 className="grow">
               As a publisher your assets get
               <br />
@@ -27,7 +27,7 @@ const Homepage = () => {
                 className="butter-start"
                 onClick={() => dispatch(verticalModalContent('signup'))}
               >
-                Request a Demo
+                Sign Up
               </button>
               <button
                 type="button"
@@ -36,20 +36,11 @@ const Homepage = () => {
                 className="butter-log"
                 onClick={() => dispatch(verticalModalContent('login'))}
               >
-                Login as Publisher
-                {/* as <RiArrowDownSLine className="ArrowDown" /> */}
+                Login
               </button>
-              {/* <button className="homeb start2">
-                Learn How <AiOutlineArrowRight className="obob" />
-              </button> */}
             </div>
           </div>
-          <div className="col-md-5">
-            {/* <img
-              src="https://res.cloudinary.com/adesanza/image/upload/v1616403586/zabuni/Group_1935_lvlpjg.svg"
-              alt=""
-              width="100%"
-            /> */}
+          <div className="col-md-5 bom">
             <iframe
               src="https://www.youtube-nocookie.com/embed/4Z4xkMVV7PE"
               title="YouTube video player"
@@ -138,20 +129,3 @@ const Homepage = () => {
 };
 
 export default Homepage;
-
-// {/* <div className="later">
-//         <center>
-//           <div>
-//             <h3 className="loader">Download ZABUNI web app</h3>
-//             <p className="accurate">
-//               Get accurate daily analysis of OOH on ZABUNI
-//             </p>
-//           </div>
-//           <div>
-//             <img
-//               src="https://res.cloudinary.com/adesanza/image/upload/v1615209035/zabuni/Group_1528_acbfe5.png"
-//               alt=""
-//             />
-//           </div>
-//         </center>
-//       </div> */}

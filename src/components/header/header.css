@@ -18,6 +18,7 @@
 }
 .olab {
   padding-top: 25px;
+  padding-bottom: 25px;
 }
 .loader {
   margin-top: 2rem;
@@ -72,9 +73,15 @@ a:hover {
 
 .taking {
   width: 100%;
-  padding: 180px 0 100px 60px;
+  padding: 160px 60px 100px 50px;
   background-image: url('https://res.cloudinary.com/adesanza/image/upload/v1623767456/zabuni/Group_2021_m9it9l.png');
   margin-left: 0;
+}
+@media screen and (max-width: 451px) {
+  .taking {
+    padding: 150px 0 80px 0;
+    /* border: 1px solid black; */
+  }
 }
 .taking1 {
   padding: 0 70px 30px;
@@ -180,7 +187,9 @@ footer h3 {
   border-radius: 5px;
 }
 .reserved {
-  padding-left: 40%;
+  display: flex;
+  place-content: flex-end;
+  margin-bottom: 0;
 }
 .searcher {
   width: 200px;
